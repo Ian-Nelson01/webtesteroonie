@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- base href="https://leafletjs.com/examples/quick-start/example.html" -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quick Start - Leaflet</title>
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://leafletjs.com/examples/quick-start/docs/images/favicon.ico">
+    <link rel="stylesheet" href="Quick%20Start%20-%20Leaflet_files/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="Quick%20Start%20-%20Leaflet_files/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .leaflet-container {
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body class="">
+<div id="map" style="width: 100%; height: 100%; position: relative; outline-style: none;"
+     class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+     tabindex="0">
+    <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(69px, -12px, 0px);">
+        <div class="leaflet-pane leaflet-tile-pane">
+            <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+                <div class="leaflet-tile-container leaflet-zoom-animated"
+                     style="z-index: 19; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt=""
+                                                                                               src="Quick%20Start%20-%20Leaflet_files/2723_004.png"
+                                                                                               class="leaflet-tile leaflet-tile-loaded"
+                                                                                               style="width: 256px; height: 256px; transform: translate3d(56px, -91px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2723_005.png"
+                        class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(312px, -91px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2724.png" class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(56px, 165px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2724_003.png"
+                        class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(312px, 165px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2723.png" class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(-200px, -91px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2723_002.png"
+                        class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(568px, -91px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2724_005.png"
+                        class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(-200px, 165px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2724_002.png"
+                        class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(568px, 165px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2725_003.png"
+                        class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(-200px, 421px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2725_004.png"
+                        class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(56px, 421px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2724_004.png"
+                        class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(-456px, 165px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2723_003.png"
+                        class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(-456px, -91px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2725_002.png"
+                        class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(-456px, 421px, 0px); opacity: 1;"><img
+                        alt="" src="Quick%20Start%20-%20Leaflet_files/2725.png" class="leaflet-tile leaflet-tile-loaded"
+                        style="width: 256px; height: 256px; transform: translate3d(312px, 421px, 0px); opacity: 1;">
+                </div>
+            </div>
+        </div>
+        <div class="leaflet-pane leaflet-overlay-pane">
+            <svg pointer-events="none" class="leaflet-zoom-animated" width="720" height="480"
+                 style="transform: translate3d(-129px, -28px, 0px);" viewBox="-129 -28 720 480">
+                <g>
+                    <path class="leaflet-interactive" stroke="red" stroke-opacity="1" stroke-width="3"
+                          stroke-linecap="round" stroke-linejoin="round" fill="#f03" fill-opacity="0.5"
+                          fill-rule="evenodd"
+                          d="M141.20355555554852,171.94704600190744a42,42 0 1,0 84,0 a42,42 0 1,0 -84,0 "></path>
+                    <path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="3"
+                          stroke-linecap="round" stroke-linejoin="round" fill="#3388ff" fill-opacity="0.2"
+                          fill-rule="evenodd" d="M358 163L474 219L550 153z"></path>
+                </g>
+            </svg>
+        </div>
+        <div class="leaflet-pane leaflet-shadow-pane"><img src="Quick%20Start%20-%20Leaflet_files/marker-shadow.png"
+                                                           class="leaflet-marker-shadow leaflet-zoom-animated"
+                                                           style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(300px, 247px, 0px);"
+                                                           alt=""></div>
+        <div class="leaflet-pane leaflet-marker-pane"><img src="Quick%20Start%20-%20Leaflet_files/marker-icon-2x.png"
+                                                           class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
+                                                           style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(300px, 247px, 0px); z-index: 247;"
+                                                           alt="Marker" tabindex="0" role="button"></div>
+        <div class="leaflet-pane leaflet-tooltip-pane"></div>
+        <div class="leaflet-pane leaflet-popup-pane">
+            <div class="leaflet-popup  leaflet-zoom-animated"
+                 style="opacity: 1; transform: translate3d(321px, 374px, 0px); bottom: -7px; left: -174px;">
+                <div class="leaflet-popup-content-wrapper">
+                    <div class="leaflet-popup-content" style="width: 301px;">You clicked the map at LatLng(47.601765,
+                        -121.937535)
+                    </div>
+                </div>
+                <div class="leaflet-popup-tip-container">
+                    <div class="leaflet-popup-tip"></div>
+                </div>
+                <a class="leaflet-popup-close-button" role="button" aria-label="Close popup" href="#close"><span
+                        aria-hidden="true">×</span></a>
+            </div>
+        </div>
+        <div class="leaflet-proxy leaflet-zoom-animated"
+             style="transform: translate3d(1047980px, 697391px, 0px) scale(4096);"></div>
+    </div>
+    <div class="leaflet-control-container">
+        <div class="leaflet-top leaflet-left">
+            <div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#"
+                                                                             title="Zoom in" role="button"
+                                                                             aria-label="Zoom in" aria-disabled="false"><span
+                    aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="#" title="Zoom out"
+                                                      role="button" aria-label="Zoom out" aria-disabled="false"><span
+                    aria-hidden="true">−</span></a></div>
+        </div>
+        <div class="leaflet-top leaflet-right"></div>
+        <div class="leaflet-bottom leaflet-left"></div>
+        <div class="leaflet-bottom leaflet-right">
+            <div class="leaflet-control-attribution leaflet-control">
+                <a href="https://leafletjs.com/" title="A JavaScript library for interactive maps">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"
+                         class="leaflet-attribution-flag">
+                        <path fill="#4C7BE1" d="M0 0h12v4H0z"></path>
+                        <path fill="#FFD500" d="M0 4h12v3H0z"></path>
+                        <path fill="#E0BC00" d="M0 7h12v1H0z"></path>
+                    </svg>
+                    Leaflet
+                </a>
+                <span aria-hidden="true">|</span> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const map = L.map('map').setView([47.601765, -121.937535], 11);
+
+    const imageUrl = 'Quick Start - Leaflet_files/mspaint.png';
+    const errorOverlayUrl = 'https://cdn-icons-png.flaticon.com/512/110/110686.png';
+    const altText = 'Image of Newark, N.J. in 1922. Source: The University of Texas at Austin, UT Libraries Map Collection.';
+    const latLngBounds = L.latLngBounds([[-89, 179], [89, -179]]);
+    const imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
+        opacity: 0,
+        errorOverlayUrl,
+        alt: altText,
+        interactive: true
+    }).addTo(map);
+
+
+    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+
+
+    const marker = L.marker([47.601765, -121.937535]).addTo(map)
+        .bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
+
+    const circle = L.circle([47.601765, -121.937535], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 500
+    }).addTo(map).bindPopup('I am a circle.');
+
+    const polygon = L.polygon([
+        [47.654284, -122.093639],
+        [47.652433, -122.106857],
+        [47.640748, -122.100334],
+        [47.631028, -122.086945],
+        [47.61957, -122.091751],
+        [47.611583, -122.106686],
+        [47.605794, -122.111149],
+        [47.59931, -122.108059],
+        [47.577304, -122.110806],
+        [47.569652, -122.086086],
+        [47.555511, -122.076988],
+        [47.563643, -122.053986],
+        [47.568048, -122.056904],
+        [47.570132, -122.067719],
+        [47.590287, -122.087631],
+        [47.61576, -122.068577],
+        [47.631501, -122.071323]], {
+
+        color: 'green',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+    }).addTo(map).bindPopup('I am a polygon.');
+
+
+
+    const popup = L.popup()
+        .setLatLng([47.601765, -121.937535])
+        .setContent('I am a standalone popup.')
+        .openOn(map);
+
+
+    function onMapClick(e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent(`You clicked the map at ${e.latlng.toString()}`)
+            .openOn(map);
+    }
+
+    map.on('click', onMapClick);
+
+
+    // Big Javascript array barf
+    const Samm = {
+        name: "Sammamish",
+        lat: "47.601765",
+        long: "-121.937535",
+        zoom: "11",
+        state: "WA",
+        text: "sample text"
+    };
+
+    const Sandpoint = {
+        name: "Sandpoint",
+        lat: "48.141349",
+        long: "-116.27298",
+        zoom: "11",
+        state: "ID",
+        text: "sample text"
+    };
+    const NoLa = {
+        name: "Baton Rouge",
+        lat: "30.456554",
+        long: "-91.189437",
+        zoom: "14",
+        state: "LA",
+        text: "sample text"
+    };
+
+    const LA = {
+        name: "Los Angeles",
+        lat: "33.782857",
+        long: "-118.187443",
+        zoom: "12",
+        state: "CA",
+        text: "sample text"
+    };
+    const Koot = {
+        name: "Kootenai",
+        lat: "48.456246",
+        long: "-115.763984",
+        zoom: "15",
+        state: "MT",
+        text: "sample text"
+    };
+    const DC = {
+        name: "Washington DC",
+        lat: "38.888995",
+        long: "-77.032864",
+        zoom: "14",
+        state: "DC",
+        text: "sample text"
+    };
+    const Port = {
+        name: "Willamette Falls",
+        lat: "45.35504",
+        long: "-122.605484",
+        zoom: "15",
+        state: "OR",
+        text: "sample text"
+    };
+    const Tac = {name: "Tacoma", lat: "47.278763", long: "-122.434632", zoom: "12", state: "WA", text: "sample text"};
+
+    const placeArr = [Samm, Sandpoint, DC, LA, Koot, NoLa, Port, Tac];
+    var counter = 0;
+
+    function buttonNext() {
+        counter++;
+        imageOverlay.setOpacity(0.5);
+        map.flyTo([placeArr[counter].lat, placeArr[counter].long], placeArr[counter].zoom);
+
+    }
+
+    // Define color scale function based on your data property
+    function getColor(d) {
+        return d > 1000 ? '#800026' :
+            d > 500  ? '#BD0026' :
+                d > 200  ? '#E31A1C' :
+                    d > 100  ? '#FC4E2A' :
+                        d > 50   ? '#FD8D3C' :
+                            d > 20   ? '#FEB24C' :
+                                d > 10   ? '#FED976' :
+                                    '#FFEDA0';
+    }
+
+    // Style function for GeoJSON features
+    function style(feature) {
+        return {
+            fillColor: getColor(feature.properties.yourDataProperty),
+            weight: 2,
+            opacity: 1,
+            color: 'white',
+            dashArray: '3',
+            fillOpacity: 0.7
+        };
+    }
+
+
+
+    const yourGeojsonData = {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "properties": { "yourDataProperty": 150 },
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [-122.12, 47.61],
+                            [-122.10, 47.61],
+                            [-122.10, 47.63],
+                            [-122.12, 47.63],
+                            [-122.12, 47.61]
+                        ]
+                    ]
+                }
+            }
+        ]
+    };
+
+
+    // Add GeoJSON layer
+    L.geoJson(yourGeojsonData, {
+        style: style,
+        onEachFeature: function(feature, layer) {
+            layer.on({
+                mouseover: highlightFeature,
+                mouseout: resetHighlight,
+                click: zoomToFeature
+            });
+        }
+    }).addTo(map);
+
+
+
+
+</script>
+<style>
+    .overlay_box {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+
+    #rcorners2 {
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        background: #FFFFFF;
+        padding: 20px;
+        width: 600px;
+        height: 500px;
+    }
+</style>
+
+
+<div class="overlay_box leaflet-overlay-pane" id="rcorners2">This is where i grew up. \n Lake Sammamish is highlighted
+    in red
+    <button type="button" onclick=" buttonNext();">click
+    </button>
+
+
+</div>
+</body>
+
+
+</html>
